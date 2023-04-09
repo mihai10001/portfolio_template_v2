@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+.MuiPaper-root .MuiAccordionSummary-content {
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.MuiPaper-root .MuiAccordionSummary-root {
+  min-height: 16px;
+  padding: 0.3rem 0;
+  flex-direction: row-reverse;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.MuiPaper-root .MuiAccordionSummary-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+@media (max-width:1279px) {
+  .MuiPaper-root .MuiAccordionSummary-content {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.MuiCollapse-root .MuiPaper-root::before {
+  height: 0px;
+}
+
+.MuiStepConnector-line.MuiStepConnector-lineVertical {
+  min-height: 5px;
+  border-left: 0px;
+}
+
+.MuiStep-root .MuiStepContent-root {
+  border-left: 0px;
+}
+
+.keep-button-text-case {
+  text-transform: none !important;
+  font-weight: 550 !important;
+}
+
+html, body, #root, #root>div {
+  height: 100%;
+}
+
+body {
+  background-color: black;
+}
+
+.canvas-as-background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.text-white {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.text-secondary {
+  color: lightgray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.rotate {
+  animation: rotate 2s linear infinite; 
+}
+@keyframes rotate {
+  to{ transform: rotateY(360deg); }
+}
+
+.filter-invert {
+  filter: invert();
+}
+
+.slider {
+  width: 300px;
+  position: fixed;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
 }
