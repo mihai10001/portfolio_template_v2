@@ -7,6 +7,7 @@ import '../App.css';
 export function MyCanvas() {
   // The animation will run between the range (0, 20), which will also be the distance to objects
   const distanceStart = 0, distanceEnd = 20;
+  const [distance, setDistance] = React.useState(distanceStart);
 
   return (
     <>
