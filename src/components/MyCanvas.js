@@ -13,6 +13,13 @@ export function MyCanvas() {
     <>
       <div className='canvas-as-background'>
         <Suspense fallback={null}>
+          <Canvas
+            shadows
+            gl={{ antialias: false }}
+            dpr={[1, 1.5]}
+            camera={{ position: [-1, 0, 1], fov: 100, near: 0.1, far: 30 }}
+          >
+            <color attach='background' args={[255, 255, 255]} />
           </Canvas>
         </Suspense>
       </div>
