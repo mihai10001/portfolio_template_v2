@@ -17,7 +17,7 @@ export function MyCanvas() {
             shadows
             gl={{ antialias: false }}
             dpr={[1, 1.5]}
-            camera={{ position: [-1, 0, 1], fov: 100, near: 0.1, far: 30 }}
+            camera={{ position: [-5, 0, 5], fov: 100, near: 0.1, far: 30 }}
           >
             <color attach='background' args={[255, 255, 255]} />
           </Canvas>
