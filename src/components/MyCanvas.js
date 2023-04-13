@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import Dolly from './3D/Dolly';
+import CanvasContent from './3D/CanvasContent';
 
 import '../App.css';
 
@@ -21,6 +22,7 @@ export function MyCanvas() {
             camera={{ position: [-5, 0, 5], fov: 100, near: 0.1, far: 30 }}
           >
             <Dolly distance={distance} />
+            <CanvasContent />
             <color attach='background' args={[255, 255, 255]} />
           </Canvas>
         </Suspense>
