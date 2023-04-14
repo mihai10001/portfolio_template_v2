@@ -1,8 +1,9 @@
 import * as React from 'react';
+import { Vector3 } from 'three';
 
 export default React.memo(function Sky({
-  position,
-  rotation,
+  position = new Vector3(5, 0, -5),
+  rotation = [0, - Math.PI / 4, 0],
   size = 200,
   holeRadius = 0.1,
   color = 'black'
