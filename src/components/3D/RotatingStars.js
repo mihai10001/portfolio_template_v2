@@ -1,13 +1,14 @@
 import * as React from 'react';
+import { MathUtils } from 'three';
 import { useFrame } from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
 import { config } from '@react-spring/web';
 import { useSpring, a } from '@react-spring/three';
 
 export default React.memo(function RotatingStars({
-  position,
-  rotation,
-  rotationSpeed,
+  position = [0, 0, 0],
+  rotation = [0, - Math.PI / 4, 0],
+  rotationSpeed = MathUtils.randFloat(80, 100),
 }) {
   const starsRef = React.useRef();
   const { aScale } = useSpring({
