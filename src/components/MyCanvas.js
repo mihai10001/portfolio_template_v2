@@ -13,6 +13,7 @@ export function MyCanvas() {
   const [distance, setDistance] = React.useState(distanceStart);
   const [springs, springsApi] = useSpring(() => ({
     distance: distanceStart,
+    onChange: ({ value: { distance }}) => setDistance(distance)
   }), []);
 
 
